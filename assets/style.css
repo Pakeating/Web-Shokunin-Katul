@@ -4,11 +4,12 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-/* variables */
+                /* variables */
 :root{
     --color1:wheat;
-    --color2:rgb(194, 91, 91);
+    --color2:rgba(245, 222, 179, 0.4);
     --color3:rgb(157, 107, 45);
+    --color4:rgba(123, 123, 123, 0.4);
     --text-color1:white;
     --text-color2:rgb(27, 27, 27);
     
@@ -100,7 +101,7 @@
 
 .about-container-selector li:hover{
     padding:30px 60px;
-    background-color:rgba(245, 222, 179, 0.4);
+    background-color:var(--color2);
 }
 
 .about-container-selector ul .active{
@@ -165,3 +166,182 @@
 
             /* productos */
 
+#productos{
+    margin-top:15vh;
+    width: 100%;
+}
+
+#productos .container-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.container-cards-producto{
+    max-width: 350px;
+    border-radius: 50px;
+    border: 2px solid var(--color3);
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    padding:20px;
+    transition: 0.2s;
+}
+.container-cards-producto:hover{
+    box-shadow: 0 0 20px var(--color3);
+    border-color: var(--color1);
+}
+
+.container-cards-producto img{
+    max-width: 300px;
+}
+.container-cards-producto p{
+    margin:30px 10px;
+}
+.container-cards-producto a{
+    padding: 10px 70px;
+    border-radius: 20px;
+    background-color: var(--color1);
+    color:var(--color3);
+    border: 1px solid var(--color3);
+    transition: ease-in 0.2s;
+}
+.container-cards-producto a i{
+    font-size: 25px;
+}
+.container-cards-producto a:hover{
+    padding: 10px 70px;
+    border-radius: 20px;
+    background-color: var(--color3);
+    color:var(--color1);
+    border: 1px solid var(--color1);
+}
+            /* seccion clientes */
+
+#clientes{
+    width: 100%;
+    margin-top:100px;
+}
+.carrousel{
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+
+}
+
+            /* eventos */
+
+#eventos{
+    margin-top:50px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:50px;
+}
+#eventos ul{
+ 
+    width: 400px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    border-radius: 20px;
+    border: 1px solid var(--color4);
+    background-color: var(--color4);
+    gap:20px;
+}
+#eventos ul li{
+    padding:20px 50px;
+    margin:20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+            /* eventos pasados */
+
+#eventos-pasados{
+    margin-top:100px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:50px;
+    
+}
+
+#eventos-pasados .container-img{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+#eventos-pasados img{
+    width: 500px;
+}
+
+            /* contacto  */
+
+#contacto{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+    background-color: var(--color1);
+    padding:50px;
+}
+#contacto .container-link{
+    height: 400px;
+    width: 300px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:40px;
+    margin-top: 30px;
+}
+#contacto a{
+    padding:20px 100px;
+    background-color: white;
+    border-radius: 50px;
+    border:2px solid var(--color3) ; 
+    transition:ease-in-out 0.2s;
+}
+
+#contacto  a i{
+    font-size: 2em;
+    color:var(--color3);
+   
+}
+#contacto .container-link-inner{
+    height:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#contacto a:hover{
+      box-shadow: 0 0 30px var(--color3);
+      border:2px solid var(--color1);
+}
+#contacto a:hover i{
+    font-size: 3em;
+    transition:ease-in-out 0.2s;
+}
+
+            /* footer */
+
+footer{
+    min-height: 100px;
+    background-color: var(--color3);
+    display:flex;
+    flex-wrap:wrap ;
+    justify-content: space-evenly;
+    align-items: center;
+}
+footer p{
+    color:var(--color1)
+}

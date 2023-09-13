@@ -22,7 +22,7 @@
     width: 100%;
     position:fixed;
     top:0;
-    background-color: var(--color1);
+    background: var(--color1);
     height:70px;
     overflow: hidden;
 }
@@ -44,11 +44,11 @@
 .navbar li a{
     text-decoration: none;
     padding:30px;
-    color:var(--text-color2)
+    color:var(--text-color2);
+    transition:0.2s;
 }
 .navbar li a:hover{
-    background-color:var(--color3);
-    color:var(--color1)
+    background:linear-gradient(white,var(--color1));
 }
 .navbar ul li img{
     height: 70px;
@@ -80,7 +80,7 @@
 
 }
 .about-container-selector{
-    height: 60px;
+    height: 80px;
     margin-bottom: 100px;
 }
 .about-container-selector ul{
@@ -100,7 +100,7 @@
 
 .about-container-selector li:hover{
     padding:30px 60px;
-    background-color:rgba(245, 222, 179, 0.2);
+    background-color:rgba(245, 222, 179, 0.4);
 }
 
 .about-container-selector ul .active{
@@ -162,4 +162,6 @@
 .container-content-text-cards .card img:hover{
     opacity:0.2;
 }
+
+            /* productos */
 

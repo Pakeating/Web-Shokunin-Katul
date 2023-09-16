@@ -33,4 +33,9 @@ cambiaAbout=function(){
 }
 selectorAbout.forEach((element) => element.addEventListener('click', cambiaAbout));
 
-;
+const menutoggle = document.querySelector('.navigation');
+
+
+menutoggle.onclick=()=>{
+    menutoggle.classList.toggle('active');
+}

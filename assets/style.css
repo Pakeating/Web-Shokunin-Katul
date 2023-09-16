@@ -345,3 +345,129 @@ footer{
 footer p{
     color:var(--color1)
 }
+
+                    /* responsiveness */
+                    
+@media (max-width: 1000px) {
+header .navbar .container-list{
+    display:none;
+}
+.navigation.active {
+    display:flex;
+    flex-direction: column;
+}
+
+.toggle{
+    position:fixed;
+    right: 20px;
+    top: 2px;
+    background-color: white;
+    border-radius: 30%;
+    border-color: 3px solid black;
+    padding:10px;
+    font-size: 40px;
+    font-weight: bolder;
+    z-index: 1000;
+}
+
+.navigation.active .toggle{
+    background-color: white;
+    box-shadow: 0 0 50px var(white);
+}
+
+.navigation.active .navbar{
+    height:90%;
+    width: 100%;
+}
+
+.navigation.active .container-list{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    font-size: 2em;
+    border-radius: 20px;
+}
+
+.navigation.active .navbar ul{
+    margin-top: 50px;
+    flex-direction: column;
+    gap:50px;
+}
+.navigation.active .navbar ul img{
+    height:100px;
+}
+.navigation.active .container-list li{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    box-shadow: 0px 0px 50px var(--color3);
+    border-radius:20px;
+    background:linear-gradient(white,var(--color1)) ;
+}
+}
+
+@media (max-width: 700px) {
+    #portada img{
+        height: 300px;
+    }
+
+    .about-container-content .container-content.active img{
+        height: 300px;
+    }
+    .about-container-content .container-content.active{
+        flex-direction: column;
+        padding: 0px 50px 50px 50px;
+    }
+    .about-container-content .container-content.active .container-content-text-cards img{
+        height:150px;
+    }
+    #clientes .carrousel {
+        width: 100vw;
+    }
+    img{
+        height:300px;
+    }
+    #eventos-pasados img{
+        width:300px;
+    }
+    .about-container-selector li{
+        padding:10px;
+    }
+}
+
+@media (max-width: 500px) {
+    #portada img{
+        height: 200px;
+    }
+    .about-container-content .container-content.active{
+        width: 100%;
+    }
+    .about-container-content .container-content.active .container-img{
+        height: 100px;
+        width: 50px;
+    }
+    .about-container-content .container-content.active img{ 
+        height: 200px;
+        width: 200px;
+    }
+    .about-container-content .container-content.active{
+        flex-direction: column;
+        padding: 0px 50px 50px 50px;
+    }
+    .about-container-content .container-content.active .container-content-text-cards img{
+        height:150px;
+    }
+    #clientes .carrousel {
+        width: 100vw;
+    }
+    img{
+        height:300px;
+    }
+    #eventos-pasados img{
+        width:300px;
+    }
+    .about-container-selector li{
+        padding:10px;
+    }
+}

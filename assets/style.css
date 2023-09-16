@@ -441,15 +441,15 @@ header .navbar .container-list{
         height: 200px;
     }
     .about-container-content .container-content.active{
-        width: 100%;
+        width: 100vw;
     }
-    .about-container-content .container-content.active .container-img{
+    .container-content.active .container-img{
+        min-width: 200px;
+        height: 400px;
+    }
+    .container-content.active .container-img .about-container-content .container-content.active img{ 
         height: 100px;
-        width: 50px;
-    }
-    .about-container-content .container-content.active img{ 
-        height: 200px;
-        width: 200px;
+        
     }
     .about-container-content .container-content.active{
         flex-direction: column;
@@ -458,14 +458,18 @@ header .navbar .container-list{
     .about-container-content .container-content.active .container-content-text-cards img{
         height:150px;
     }
+    .container-content-text-cards{
+        width: 100px;
+    }
     #clientes .carrousel {
         width: 100vw;
     }
-    img{
-        height:300px;
+    #eventos{
+        width:100vw;
     }
+    
     #eventos-pasados img{
-        width:300px;
+        width:200px;
     }
     .about-container-selector li{
         padding:10px;

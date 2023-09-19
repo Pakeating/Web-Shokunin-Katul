@@ -1,8 +1,7 @@
 
+/////////////ABOUT SECTION
 let selectorAbout = document.querySelectorAll('.selector');
 let contenido = document.querySelectorAll('.container-content');
-
-
 
 cambiaAbout=function(){
     selectorAbout.forEach((element)=>{
@@ -39,3 +38,20 @@ const menutoggle = document.querySelector('.navigation');
 menutoggle.onclick=()=>{
     menutoggle.classList.toggle('active');
 }
+
+/////////////EVENTOS PASADOS SECTION
+
+document.querySelector('.eventos-pasados-slider-nav').addEventListener('click', (element) => {
+    const slide = document.querySelector(element.target.getAttribute('href'));
+    if (!slide) return;
+    
+    if (slide.scrollIntoViewIfNeeded) {
+        element.preventDefault();
+        slide.scrollIntoViewIfNeeded();
+    } else if (slide.scrollIntoView) {
+        element.preventDefault();
+        slide.scrollIntoView();
+    }
+  });
+
+  

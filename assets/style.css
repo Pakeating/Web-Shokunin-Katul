@@ -36,6 +36,7 @@
     background-color: var(--color1);
     height:70px;
     overflow: hidden;
+    z-index: 100;
 }
 .navbar ul{
     display:flex;
@@ -275,20 +276,31 @@
 }
 
             /* eventos pasados */
-
+#eventos-pasados{
+    max-width: fit-content;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 300px;
+    
+}
 .eventos-pasados-sliderwrapper{
     position:relative;
-    max-width: 48rem;
+    max-width: 50vw;
     margin:0 auto;
 }
 .eventos-pasados-slider-img{
     display:flex;
-    aspect-ratio: 16/9;
+    /* aspect-ratio: 16/9; */
     overflow-x:auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3 rem -0,75rem hsla(0,0,0,0.25);
+    box-shadow: 0 1.5rem 3 rem -0.75rem rgba(0, 0, 0, 0.30);
     border-radius: 25px;
+}
+.eventos-pasados-slider-img::-webkit-scrollbar {
+    display:none;
 }
 .eventos-pasados-slider-img img{
     flex:1 0 100%;
@@ -305,34 +317,20 @@
     z-index:1;
 }
 .eventos-pasados-slider-nav a{
-    width:10px;
-    height:10px;
+    width:20px;
+    height:20px;
     border-radius: 50%;
-    background-color: #cb6fe7;
-    opacity:0.75;
+    background-color: var(--color3);
+    opacity:0.5;
     transition:opacity ease 0.2s;
 }
 .eventos-pasados-slider-nav a:hover{
     opacity:1;
 }
-            /* #eventos-pasados{
-    margin-top:100px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    gap:50px;
-    
+.eventos-pasados-slider-nav a.active{
+    background-color: var(--color1);
+    opacity:1;
 }
-
-#eventos-pasados .container-img{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-#eventos-pasados img{
-    width: 500px;
-} */
 
             /* contacto  */
 
@@ -440,8 +438,11 @@ header .navbar .container-list{
 
 .navigation.active .navbar ul{
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
     flex-direction: column;
     gap:50px;
+    width:80vw;
 }
 .navigation.active .navbar ul img{
     height:100px;
@@ -458,6 +459,11 @@ header .navbar .container-list{
 }
 
 @media (max-width: 700px) {
+    .navigation.active .container-list li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
     #portada img{
         height: 300px;
     }
